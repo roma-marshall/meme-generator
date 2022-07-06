@@ -1,8 +1,11 @@
-let texttop, textbottom, img, generate, meme;
+let texttop, textbottom, img, generate, meme, ctx;
 
 function createMemes(image) {
     meme.widtch = image.widtch;
     meme.height = image.height;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, 0, 0);
 }
 
 (() => {
