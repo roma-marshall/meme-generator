@@ -8,11 +8,25 @@
     <div>
       <input name="" id="text-top" cols="30" rows="2" />
       textSize:
-      <input id="top-size" type="range" min="0.01" max="0.3" step="0.03" value="0.1" />
+      <input
+        id="top-size"
+        type="range"
+        min="0.01"
+        max="0.3"
+        step="0.03"
+        value="0.1"
+      />
       <br />
       <input name="" id="text-bottom" cols="30" rows="2" />
       textSize:
-      <input id="bottom-size" type="range" min="0.01" max="0.3" step="0.03" value="0.2" />
+      <input
+        id="bottom-size"
+        type="range"
+        min="0.01"
+        max="0.3"
+        step="0.03"
+        value="0.2"
+      />
     </div>
     <div>
       <input type="file" id="img" accept="image" />
@@ -21,8 +35,19 @@
       <button id="generate">create meme</button>
     </div>
     <div>
+      <button id="convert">Convert to image</button>
+    </div>
+    <div>
       <canvas id="meme"></canvas>
     </div>
+    <div>
+      <p id="preview"></p>
+      <p id="result"></p>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://github.com/niklasvh/html2canvas/releases/download/0.5.0-alpha1/html2canvas.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

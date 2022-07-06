@@ -56,8 +56,35 @@ function createMemes(image, texttop, textbottom, topSize, bottomSize) {
       let image = new Image();
       image.src = file.result;
       // console.log(image.src);
-      createMemes(image, texttop.value, textbottom.value, topSize.value, bottomSize.value);
+      createMemes(
+        image,
+        texttop.value,
+        textbottom.value,
+        topSize.value,
+        bottomSize.value
+      );
     };
     file.readAsDataURL(img.files[0]);
   });
 })();
+
+// download canvas
+// click event
+let convertBtn = document.querySelector("#convert");
+convertBtn.addEventListener("click", () => {
+  // convert table to image
+  let resultDiv = document.querySelector("#result");
+  let r = (document.querySelector("#preview").innerHTML = "Preview:");
+  html2canvas(document.querySelector("#meme"), {
+    onrendered: function (canvas) {
+      let img = canvas.toDataURL("image/png");
+      result.innerHTML = '<img src="' + img + '"><br />';
+      result.innerHTML += result.innerHTML =
+        '<a download="result.png" href="' + img + '">PNG</a>&nbsp;';
+      result.innerHTML += result.innerHTML =
+        '<a download="result.jpg" href="' + img + '">JPG</a>&nbsp;';
+      result.innerHTML += result.innerHTML =
+        '<a download="result.gif" href="' + img + '">GIF</a>';
+    },
+  });
+});
