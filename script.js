@@ -1,6 +1,8 @@
 let texttop, textbottom, img, generate, meme;
 
-function createMemes() {}
+function createMemes(image) {
+    
+}
 
 (() => {
   texttop = document.querySelector("#text-top");
@@ -16,7 +18,8 @@ function createMemes() {}
     file.onload = () => {
         let image = new Image;
         image.src = file.result;
-        // console.log(image.src);
+        console.log(image.src);
+        createMemes(image);
     }
     file.readAsDataURL(img.files[0]);
   });
