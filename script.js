@@ -41,7 +41,7 @@ function createMemes(image, texttop, textbottom, topSize, bottomSize) {
   texttop = document.querySelector("#text-top");
   textbottom = document.querySelector("#text-bottom");
   topSize = document.querySelector("#top-size");
-  bottomSize = document.querySelector("bottom-size");
+  bottomSize = document.querySelector("#bottom-size");
   img = document.querySelector("#img");
   create = document.querySelector("#generate");
   meme = document.querySelector("#meme");
