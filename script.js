@@ -1,4 +1,4 @@
-let texttop, textbottom, img, generate, meme, ctx;
+let texttop, textbottom, img, generate, meme, ctx, topSize, bottomSize;
 
 function createMemes(image, texttop, textbottom) {
   meme.width = image.width;
