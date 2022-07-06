@@ -15,6 +15,7 @@ function createMemes(image, texttop, textbottom) {
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
   ctx.fillText(texttop, meme.width / 2, fontSize, meme.width);
+  ctx.strokeText(texttop, meme.width / 2, fontSize, meme.width);
 }
 
 (() => {
