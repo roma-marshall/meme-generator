@@ -1,11 +1,11 @@
 let texttop, textbottom, img, generate, meme, ctx;
 
 function createMemes(image) {
-    meme.widtch = image.widtch;
-    meme.height = image.height;
+  meme.widtch = image.widtch;
+  meme.height = image.height;
 
-    ctx.clearRect(0, 0, meme.width, meme.height);
-    ctx.drawImage(image, 0, 0);
+  ctx.clearRect(0, 0, meme.width, meme.height);
+  ctx.drawImage(image, 0, 0);
 }
 
 (() => {
@@ -15,16 +15,18 @@ function createMemes(image) {
   create = document.querySelector("#generate");
   meme = document.querySelector("#meme");
 
+  ctx = meme.getContext("2d");
+
   meme.widtch = meme.height = 0;
 
   create.addEventListener("click", () => {
     let file = new FileReader();
     file.onload = () => {
-        let image = new Image;
-        image.src = file.result;
-        console.log(image.src);
-        createMemes(image);
-    }
+      let image = new Image();
+      image.src = file.result;
+      // console.log(image.src);
+      createMemes(image);
+    };
     file.readAsDataURL(img.files[0]);
   });
 })();
