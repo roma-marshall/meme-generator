@@ -1,8 +1,8 @@
 let texttop, textbottom, img, generate, meme;
 
 function createMemes(image) {
-    meme.widtch = imgage.widtch;
-    meme.height = imgage.height;
+    meme.widtch = image.widtch;
+    meme.height = image.height;
 }
 
 (() => {
