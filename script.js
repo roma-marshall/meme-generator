@@ -8,7 +8,10 @@ function createMemes(image, texttop, textbottom) {
   ctx.drawImage(image, 0, 0);
 
   let fontSize = meme.width / 12;
-  ctx.font = fontSize + 'px Impact';
+  ctx.font = fontSize + "px Impact";
+  ctx.fillStyle = "white";
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = fontSize / 12;
 }
 
 (() => {
