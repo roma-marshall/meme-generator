@@ -12,6 +12,9 @@ function createMemes(image, texttop, textbottom) {
   ctx.fillStyle = "white";
   ctx.strokeStyle = "black";
   ctx.lineWidth = fontSize / 12;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "top";
+  ctx.fillText(texttop, meme.width / 2, fontSize, meme.width);
 }
 
 (() => {
