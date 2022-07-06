@@ -13,6 +13,7 @@ function createMemes(image, texttop, textbottom) {
   ctx.strokeStyle = "black";
   ctx.lineWidth = fontSize / 12;
   ctx.textAlign = "center";
+
   ctx.textBaseline = "top";
   ctx.fillText(texttop, meme.width / 2, fontSize, meme.width);
   ctx.strokeText(texttop, meme.width / 2, fontSize, meme.width);
