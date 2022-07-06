@@ -13,7 +13,11 @@ function createMemes() {}
 
   create.addEventListener("click", () => {
     let file = new FileReader();
-
+    file.onload = () => {
+        let image = new Image;
+        image.src = file.result;
+        // console.log(image.src);
+    }
     file.readAsDataURL(img.files[0]);
   });
 })();
