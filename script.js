@@ -17,7 +17,7 @@ function createMemes(image, texttop, textbottom, topSize, bottomSize) {
   ctx.textAlign = "center";
 
   // topSize
-  fontSize = meme.width / 12;
+  fontSize = meme.width * topSize;
   ctx.font = fontSize + "px Impact";
   ctx.lineWidth = fontSize / 12;
 
@@ -27,7 +27,7 @@ function createMemes(image, texttop, textbottom, topSize, bottomSize) {
   ctx.strokeText(texttop, meme.width / 2, fontSize, meme.width);
 
   // bottomSize
-  fontSize = meme.width / 12;
+  fontSize = meme.width * bottomSize;
   ctx.font = fontSize + "px Impact";
   ctx.lineWidth = fontSize / 12;
 
