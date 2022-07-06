@@ -1,7 +1,7 @@
 let texttop, textbottom, img, generate, meme, ctx;
 
 function createMemes(image) {
-  meme.widtch = image.widtch;
+  meme.width = image.width;
   meme.height = image.height;
 
   ctx.clearRect(0, 0, meme.width, meme.height);
@@ -17,7 +17,7 @@ function createMemes(image) {
 
   ctx = meme.getContext("2d");
 
-  meme.widtch = meme.height = 0;
+  meme.width = meme.height = 0;
 
   create.addEventListener("click", () => {
     let file = new FileReader();
