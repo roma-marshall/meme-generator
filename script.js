@@ -4,7 +4,7 @@ function createMemes(image) {
     meme.widtch = image.widtch;
     meme.height = image.height;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, meme.width, meme.height);
     ctx.drawImage(image, 0, 0);
 }
 
