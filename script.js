@@ -16,6 +16,10 @@ function createMemes(image, texttop, textbottom) {
   ctx.textBaseline = "top";
   ctx.fillText(texttop, meme.width / 2, fontSize, meme.width);
   ctx.strokeText(texttop, meme.width / 2, fontSize, meme.width);
+
+  ctx.textBaseline = "bottom";
+  ctx.fillText(textbottom, meme.width / 2, fontSize, meme.width);
+  ctx.strokeText(textbottom, meme.width / 2, fontSize, meme.width);
 }
 
 (() => {
