@@ -1,11 +1,14 @@
 let texttop, textbottom, img, generate, meme, ctx;
 
-function createMemes(image) {
+function createMemes(image, texttop, textbottom) {
   meme.width = image.width;
   meme.height = image.height;
 
   ctx.clearRect(0, 0, meme.width, meme.height);
   ctx.drawImage(image, 0, 0);
+
+  let fontSize = meme.width / 12;
+  ctx.font = fontSize + 'px Impact';
 }
 
 (() => {
@@ -25,7 +28,7 @@ function createMemes(image) {
       let image = new Image();
       image.src = file.result;
       // console.log(image.src);
-      createMemes(image);
+      createMemes(image, texttop.value, textbottom.value);
     };
     file.readAsDataURL(img.files[0]);
   });
