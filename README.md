@@ -37,3 +37,6 @@ cd meme-generator
 open index.html
 ```
 ---
+
+## License
+MIT License
